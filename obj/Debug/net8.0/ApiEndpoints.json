@@ -1,0 +1,22 @@
+[
+  {
+    "ContainingType": "WebApplication1.Controllers.CompanyController",
+    "Method": "GetCompany",
+    "RelativePath": "api/Company",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication1.Controllers.RandomNumberController",
+    "Method": "GetRandomNumber",
+    "RelativePath": "api/RandomNumber",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
