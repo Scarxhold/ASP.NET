@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Models;
 
@@ -9,6 +9,7 @@ namespace WebApplication1.Controllers
     public class CompanyController : ControllerBase
     {
         private readonly Company _company;
+        private readonly string _validPassword = "1234";
 
         public CompanyController()
         {
@@ -21,11 +22,17 @@ namespace WebApplication1.Controllers
             };
         }
 
-        // GET: api/company
         [HttpGet]
-        public IActionResult GetCompany()
+        public IActionResult GetCompany([FromQuery] string password)
         {
-            return Ok(_company);
+            if (password == _validPassword) 
+            { 
+                return Ok(_company);
+            }
+            else
+            {
+                return StatusCode(403, "Invalid password. Access denied.");
+            }
         }
     }
 }
