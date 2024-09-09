@@ -8,12 +8,12 @@ namespace WebApplication1.Controllers
     [ApiController]
     public class CompanyController : ControllerBase
     {
-        private readonly Company _company;
-        private readonly string _validPassword = "1234";
+        private readonly Company company;
+        private readonly string Password = "1234";
 
         public CompanyController()
         {
-            _company = new Company
+            company = new Company
             {
                 Id = 1,
                 Name = "Example Company",
@@ -25,9 +25,9 @@ namespace WebApplication1.Controllers
         [HttpGet]
         public IActionResult GetCompany([FromQuery] string password)
         {
-            if (password == _validPassword) 
+            if (password == Password) 
             { 
-                return Ok(_company);
+                return Ok(company);
             }
             else
             {
