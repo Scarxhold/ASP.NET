@@ -15,15 +15,15 @@ namespace WebApplication1.Controllers
         {
             company = new Company
             {
-                Id = 1,
-                Name = "Example Company",
-                Address = "123 Main St, City, Country",
+                Id = 66,
+                Name = "Company",
+                Address = "123 Main St, Seoul, Korea",
                 Industry = "Technology"
             };
         }
 
         [HttpGet]
-        public IActionResult GetCompany([FromQuery] string password)
+        public IActionResult Index([FromQuery] string password)
         {
             if (password == Password) 
             { 
